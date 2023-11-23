@@ -77,10 +77,7 @@ h2 {
     position: absolute;
     border-radius: 10px;
     inset: 0;
-    background-image: url(/src/img/download.jpg);
-    
-    background-size: 100px;
-    opacity: 85%;
+    background: linear-gradient(45deg, #000, #505050); 
     transition: 0.25s;
     transform: rotateY(0deg);
     backface-visibility: hidden;
