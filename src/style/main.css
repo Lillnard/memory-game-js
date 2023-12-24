@@ -2,8 +2,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-height: 95%;
-    max-width: 95%;
+    max-height: 90%;
+    max-width: 100%;
     background: #fc1e8a;
     user-select: none;
 }
@@ -50,7 +50,7 @@ h2 {
 }
 
 .game {
-    width: 430px;
+    width: 350px;
     height: 430px;
     display: flex;
     flex-wrap: wrap;
@@ -62,13 +62,13 @@ h2 {
 .item {
     position: relative;
     border-radius: 10px;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #fff;
-    font-size: 3em;
+    font-size: 4em;
     transform: rotateY(180deg);
     transition: 0.50s;
 }
