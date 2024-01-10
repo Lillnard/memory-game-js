@@ -53,3 +53,20 @@ function checkMatch() {
         alert("Você venceu!!!")
     }
     }
+
+    //função modo dark
+
+let trilho = document.getElementById('trilho')
+let titulo = document.getElementById('titulo')
+let body = document.querySelector('body')
+let container = document.querySelector('.container')
+let reset = document.querySelector('.reset')
+
+trilho.addEventListener('click',()=>{
+    trilho.classList.toggle('dark')
+    titulo.classList.toggle('dark')
+    body.classList.toggle('dark')
+    container.classList.toggle('dark')
+    reset.classList.toggle('dark')
+
+})

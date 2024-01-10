@@ -2,7 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-height: 90%;
+    max-height: 100%;
     max-width: 100%;
     background: #fc1e8a;
     user-select: none;
@@ -22,13 +22,37 @@ body {
         #ec38bc 70%,
         #fdeff9 100%
     );
-    padding: 40px 60px;
+    padding: 20px 60px;
 }
 
 h2 {
     font-size: 3em;
     color: #fff;
+    margin-right: 70px;
     text-transform: uppercase;
+}
+
+.trilho{
+    width: 70px;
+    height: 35px;
+    margin-left: 280px;
+    margin-top: -68px;
+    border-radius: 25px;
+    background: #dadadae7;
+    position: relative;
+    cursor: pointer;
+}
+
+.trilho .indicador{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-top: 0px;
+    background-color: #000000e7;
+    position: absolute;
+    transform: scale(.9);
+    left: 0;
+    transition: .5s;
 }
 
 .reset {
@@ -51,12 +75,13 @@ h2 {
 
 .game {
     width: 350px;
-    height: 430px;
+    height: 380px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     transform-style: preserve-3d;
     perspective: 500px;
+  
 }
 
 .item {
@@ -71,6 +96,7 @@ h2 {
     font-size: 4em;
     transform: rotateY(180deg);
     transition: 0.50s;
+    cursor: pointer;
 }
 
 .item::after {
@@ -78,7 +104,7 @@ h2 {
     position: absolute;
     border-radius: 10px;
     inset: 0;
-    background: linear-gradient(45deg, #000, #505050); 
+    background: linear-gradient(45deg, #000000, #808080); 
     transition: 0.25s;
     transform: rotateY(0deg);
     backface-visibility: hidden;
@@ -91,3 +117,33 @@ h2 {
 .boxOpen::after, .boxMatch::after {
     transform: rotateY(180deg);
 }
+
+/* estilo de cor dark */
+
+body.dark{
+    background-color: #1b1b1b;
+}
+
+.container.dark{
+background: #000000;
+}
+
+h2.dark{
+    color: #ec38bc;
+}
+
+.trilho.dark{
+    background: #808080;
+}
+
+.trilho.dark .indicador{
+    left: 34px;
+    background-color: #7303c0;
+}
+
+.reset.dark{
+    background-color: #7303c0;
+    font-weight: 600;
+}
+
+
