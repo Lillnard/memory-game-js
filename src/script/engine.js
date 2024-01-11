@@ -54,7 +54,7 @@ function checkMatch() {
     }
     }
 
-    //função modo dark
+//função modo dark
 
 let trilho = document.getElementById('trilho')
 let titulo = document.getElementById('titulo')
@@ -68,5 +68,4 @@ trilho.addEventListener('click',()=>{
     body.classList.toggle('dark')
     container.classList.toggle('dark')
     reset.classList.toggle('dark')
-
 })
