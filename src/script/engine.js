@@ -74,10 +74,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function startTimer() {
         startTime = Date.now();
+        updateTimer();
     }
 
     function endTimer() {
         endTime = Date.now();
+    }
+
+    function updateTimer() {
+        const tempoElement = document.getElementById("tempo");
+        setInterval(function () {
+            const elapsedTime = Date.now() - startTime;
+            tempoElement.textContent = formatTime(elapsedTime);
+        }, 1000);
     }
 
     function formatTime(time) {
@@ -106,21 +115,24 @@ document.addEventListener("DOMContentLoaded", function () {
         resultOverlay.style.display = "block";
     }
 
+    // Modo Dark conforme configuração do sistema
+    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDarkMode) {
+        document.body.classList.add('dark');
+    }
+
     // Restante do seu código de jogo aqui...
 
     //função modo dark
     let trilho = document.getElementById("trilho");
     let titulo = document.getElementById("titulo");
+    let tempo = document.getElementById("tempo-container");
     let body = document.querySelector("body");
     let container = document.querySelector(".container");
     let reset = document.querySelector(".reset");
 
     trilho.addEventListener("click", () => {
-        trilho.classList.toggle("dark");
-        titulo.classList.toggle("dark");
-        body.classList.toggle("dark");
-        container.classList.toggle("dark");
-        reset.classList.toggle("dark");
+        toggleDarkMode();
     });
 
     const overlay = document.getElementById("overlay");
@@ -160,5 +172,13 @@ document.addEventListener("DOMContentLoaded", function () {
             box.onclick = handleclick;
             document.querySelector(".game").appendChild(box);
         }
+    }
+
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark');
+        titulo.classList.toggle('dark');
+        tempo.classList.toggle('dark');
+        container.classList.toggle('dark');
+        reset.classList.toggle('dark');
     }
 });

@@ -32,7 +32,16 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    font-size: 25px;
+}
+
+.overlay-content h3{
+    background-image: linear-gradient(45deg, #ffae00, #ff3c00);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10PX;
+
 }
 
 .start-button, .restart-button {
@@ -79,8 +88,24 @@ body {
     padding: 35px 60px;
 }
 
+.titulo-container{
+    display: flex;
+    justify-content: space-between;
+    margin: -10px 0 -30px 0;
+}
+
+.tempo{
+    display: flex;
+    gap: 0 30px;
+    margin-bottom: -20px;
+}
+
+#tempo-container.dark h3{
+    color: #ff7b00
+}
+
 h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     color: #000000cc;
     margin-right: 70px;
     line-height: 25px;
@@ -91,8 +116,6 @@ h2 {
 .trilho{
     width: 70px;
     height: 20px;
-    margin-left: 280px;
-    margin-top: -52px;
     border-radius: 25px;
     background: #dadadae7;
     position: relative;
@@ -102,8 +125,8 @@ h2 {
 .trilho .indicador{
     width: 35px;
     height: 35px;
-    border-radius: 50%;
     margin-top: -7px;
+    border-radius: 50%;
     background-color: #000000e7;
     position: absolute;
     left: 0;
@@ -112,6 +135,11 @@ h2 {
 
 .trilho .indicador:hover{
     background-color: #000000ab;
+}
+
+.tempo{
+    display: flex;
+    margin-top: 20px;
 }
 
 
@@ -234,4 +262,11 @@ h2.dark{
     box-shadow: 0px 0px 8px #000000;
 }
 
+@media screen and (max-width: 500px){
+
+
+    h2{
+        font-size: 25px;
+    }
+}
 
